@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="tfapi/tfjs@1.2.9"></script>
+    <script src="tfapi/tftn.js"></script>
+    <script src="motion/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>    
+    <button id="gesture1" onmousedown="collect(0)" >Gesture0</button>
+    <button id="gesture2" onmousedown="collect(1)" >Gesture1</button>
+    <button id="gesture3" onmousedown="collect(2)" >Gesture2</button>
+    <button id="gesture4" onmousedown="collect(3)" >Gesture3</button>
+    <div id="Examples">No example</div>
+    <br/><br/>
+    <button id="train" onclick="train()">Train</button>
+    <div id="TrainState"></div>
+    <br/><br/>
+    <button id="predict" onclick="predict()">Predict</button>
+    <div id="PredictState"></div>
+    <br/><br/>
+    <button id="clear" onclick="clearTrainData()">Clear</button>
+    <script src="gesture_recog.js"></script>
+  </body>
+</html>    
+

@@ -1,0 +1,40 @@
+
+<html>
+  <head>
+    <script src="../shared/js/tfjs@1.2.9"></script>
+    <script src="../shared/js/jquery.min.js"></script>
+    <script src="../shared/js/savememo.js"></script>
+    <script src="js/speech-commands.min.js"></script>
+    <script src="js/ap_api.js"></script>
+    <style>
+            button {
+                min-width: 160px;
+                height: 64px;
+                padding: 10px;
+                background-color: #ccc;
+                border-radius: 22px;
+                cursor: pointer;
+            }
+    </style>
+  </head>
+  <body>    
+    <button id="saveModel" onclick="saveModel()">Save Model to storage</button>
+    <button id="loadModel" onclick="loadModel()">Load Model from storage</button>    
+    <div    id="SavingState"></div>
+    <br/><br/>
+     <button id="sound1" onmousedown="collect(0)" onmouseup="collect(null)">Example0</button>
+    <button id="sound2" onmousedown="collect(1)" onmouseup="collect(null)">Example1</button>
+    <button id="sound3" onmousedown="collect(2)" onmouseup="collect(null)">Example2</button>
+    <div id="Examples">No example</div>
+    <br/><br/>
+    <button id="train" onclick="train()">Train</button>
+    <div id="TrainState"></div>
+    <br/><br/>
+    <button id="listen" onclick="listen()">Listen</button>
+    <div id="ListenState">No sound</div>
+    <br/><br/>
+    <button id="clear" onclick="clearTrainData()">Clear</button>
+    <script src="js/index.js"></script>
+  </body>
+</html>    
+

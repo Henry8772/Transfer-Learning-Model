@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Motion Sensing Demo</title>
+        <meta name="description" content="(C)2018-2019 Tinkamo By Jam Zhang">
+    	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src * file: cdvfile: data: gap: wss: http: https: * 'unsafe-inline' 'unsafe-eval' 'self'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+    	<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+        <script src="../shared/js/tfjs@1.2.9"></script>
+        <script src="../shared/js/jquery.min.js"></script>
+        <script src="../shared/js/savememo.js"></script>
+        <script src="js/motion_api.js"></script>
+        <script src="js/index.js" charset="utf-8"></script>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                overflow: hidden;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                font-family: sans-serif;
+                font-size: 24px;
+            }
+            .info {
+                /* flex-grow: 1; */
+                min-width: 280px;
+                white-space: pre;
+            }
+            .button {
+                min-width: 160px;
+                height: 64px;
+                padding: 10px;
+                background-color: #ccc;
+                border-radius: 22px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="example0" class="button" onclick='toggleDeviceMotion(0)'>Example0</button>
+        <button id="example1" class="button" onclick='toggleDeviceMotion(1)'>Example1</button>
+        <button id="example2" class="button" onclick='toggleDeviceMotion(2)'>Example2</button>
+        <button id="clear"    class="button" onclick='clearExamples()'>Clear</button>
+        <div id="Examples">No example</div>
+        <pre id="info" class="info"></pre>
+        <button id="train" class="button" onclick='train()'>Train</button>
+        <div id="TrainState">Ready</div>
+        <button id="predict" class="button" onclick='predict()'>Predict</button>
+        <div id="PredictState"></div>
+        <pre class="info" id="Possibility"></pre>
+        <button class="button" onclick='loadModel()'>Load Model</button>
+        <button class="button" onclick='saveModel()'>Save Model</button>
+    </body>
+</html>

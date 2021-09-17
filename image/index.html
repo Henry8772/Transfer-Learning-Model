@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="../shared/js/tfjs@1.2.9"></script>
+    <script src="../shared/js/jquery.min.js"></script>
+    <script src="../shared/js/savememo.js"></script>
+    <script src="js/mobilenet.min.js"></script>
+    <script src="js/knn-classifier.min.js"></script>
+    <script src="js/image_api.js"></script>
+    <style>
+            .button {
+                min-width: 160px;
+                height: 64px;
+                padding: 10px;
+                background-color: #ccc;
+                border-radius: 22px;
+                cursor: pointer;
+            }
+    </style>
+  </head>
+  <body>
+    <div id="console"></div>
+    <!-- Add an image that we will use to test -->
+    <!-- img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=227 height=227/ -->
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+    <br/>
+    <button class="button" id="class-a">Add A</button>
+    <button class="button" id="class-b">Add B</button>
+    <button class="button" id="class-c">Add C</button>
+    <br/>
+    <!-- Load index.js after the content of the page -->
+    <button class="button" onclick="loadModel()">load model</button>
+    <button class="button" onclick="saveModel()">save model</button>
+    <script src="js/index.js"></script>
+  </body>
+</html>
