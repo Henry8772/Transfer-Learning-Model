@@ -146,7 +146,4 @@ To common use case, user only need to take first item of this array.
 I found it has problem in iphone to run audio and image demo.
 This might be caused by permission issue. Since I do not have debug environment, this issue is still remained.
 
-## tfjs-models
-
-If you have any extra customization requirement, please refer to [this](https://github.com/woodylee1974/tfjs-models.git), this contains trivial modification for adapting this project.
 
